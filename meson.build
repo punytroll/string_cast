@@ -1,7 +1,7 @@
 project(
   'string_cast',
   'cpp',
-  version: '2.0.0',
+  version: '2.0.1',
   meson_version: '>=0.63.0',
   default_options: ['cpp_std=c++20', 'werror=true', 'warning_level=3'])
 

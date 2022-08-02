@@ -18,19 +18,13 @@
 
 #include <cassert>
 #include <string>
-#include <tuple>
 
 #include <string_cast/string_cast.h>
 
 using namespace std::string_literals;
 
-auto main(int argc, char * argv[]) -> int
+auto main([[maybe_unused]] int argc, [[maybe_unused]] char * argv[]) -> int
 {
-    // boilerplate for unused variables
-    std::ignore = argc;
-    std::ignore = argv;
-    
-    // tests follow
 	assert(from_string_cast<unsigned int>("123") == 123);
 	assert(from_string_cast<signed int>("-163") == -163);
 	assert(to_string_cast(34.56f) == "34.56");
