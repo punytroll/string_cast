@@ -20,14 +20,15 @@
 #define STRING_CAST__STRING_CAST_H
 
 #include <string>
+#include <string_view>
 
-template < typename Type >
-Type from_string_cast(const std::string & String);
+template<typename Type>
+auto from_string_cast(std::string_view String) -> Type;
 
-template < typename Type >
-std::string to_string_cast(const Type & Value);
+template<typename Type>
+auto to_string_cast(Type const & Value) -> std::string;
 
-template < typename Type >
-std::string to_string_cast(const Type & Value, int Precision);
+template<typename Type>
+auto to_string_cast(Type const & Value, int Precision) -> std::string;
 
 #endif

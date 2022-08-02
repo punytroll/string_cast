@@ -17,33 +17,40 @@
 **/
 
 #include <cassert>
+#include <string>
+#include <tuple>
 
 #include <string_cast/string_cast.h>
 
 using namespace std::string_literals;
 
-int main(int argc, char ** argv)
+auto main(int argc, char * argv[]) -> int
 {
-	assert(from_string_cast< unsigned int >("123") == 123);
-	assert(from_string_cast< signed int >("-163") == -163);
+    // boilerplate for unused variables
+    std::ignore = argc;
+    std::ignore = argv;
+    
+    // tests follow
+	assert(from_string_cast<unsigned int>("123") == 123);
+	assert(from_string_cast<signed int>("-163") == -163);
 	assert(to_string_cast(34.56f) == "34.56");
 	assert(to_string_cast(34.56) == "34.56");
-	assert(from_string_cast< float >("123") == 123.0f);
-	assert(from_string_cast< double >("-163.345") == -163.345);
+	assert(from_string_cast<float>("123") == 123.0f);
+	assert(from_string_cast<double>("-163.345") == -163.345);
 	assert(to_string_cast(-4) == "-4");
 	assert(to_string_cast(true) == "true");
 	assert(to_string_cast(false) == "false");
-	assert(from_string_cast< bool >("true") == true);
-	assert(from_string_cast< bool >("false") == false);
-	assert(from_string_cast< bool >("True") == false);
-	assert(from_string_cast< bool >("1") == false);
-	assert(to_string_cast(static_cast< std::uint8_t >(8)) == "8");
-	assert(to_string_cast(static_cast< std::uint8_t >(-432)) == "80");
-	assert(from_string_cast< std::uint8_t >("8") == 8);
+	assert(from_string_cast<bool>("true") == true);
+	assert(from_string_cast<bool>("false") == false);
+	assert(from_string_cast<bool>("True") == false);
+	assert(from_string_cast<bool>("1") == false);
+	assert(to_string_cast(static_cast<std::uint8_t>(8)) == "8");
+	assert(to_string_cast(static_cast<std::uint8_t>(-432)) == "80");
+	assert(from_string_cast<std::uint8_t>("8") == 8);
 	assert(to_string_cast("Testing"s) == "Testing");
-	assert(from_string_cast< std::string >("Testing"s) == "Testing");
-	assert(to_string_cast(static_cast< std::uint16_t >(4021)) == "4021");
-	assert(from_string_cast< std::uint16_t >("231") == 231);
+	assert(from_string_cast<std::string>("Testing"s) == "Testing");
+	assert(to_string_cast(static_cast<std::uint16_t>(4021)) == "4021");
+	assert(from_string_cast<std::uint16_t>("231") == 231);
 	
 	return 0;
 }
