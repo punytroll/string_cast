@@ -25,7 +25,7 @@ test(
   'string_cast',
   executable(
     'string_cast_test',
-    sources: ['test/test.cpp'],
+    sources: ['testing/test_suite.cpp'],
     dependencies: [string_cast_library_dependency]
   )
 )
