@@ -21,6 +21,7 @@
 **/
 
 #include <cassert>
+#include <cstdint>
 #include <string>
 
 #include <string_cast/string_cast.h>

@@ -20,6 +20,7 @@
  * IN THE SOFTWARE.
 **/
 
+#include <cstdint>
 #include <iomanip>
 #include <sstream>
 
