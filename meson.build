@@ -1,13 +1,13 @@
 project(
   'string_cast',
   'cpp',
-  version: '2.0.2',
-  meson_version: '>=0.63.0',
-  default_options: [
-    'cpp_std=c++20',
-    'warning_level=3',
-    'werror=true'
-  ]
+  version: '2.1.0',
+  meson_version: '>=1.8.2',
+  default_options: {
+    'cpp_std': 'c++23',
+    'warning_level': '3',
+    'werror': true
+  }
 )
 
 string_cast_library = library(
